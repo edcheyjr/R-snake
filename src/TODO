@@ -1,12 +1,25 @@
-TODO:Game features yet to implement
+## TODO:Game features yet to implement
 
 1. pause button and pause state
+   at first just impliment pause any play as in mention in game.rs later implement _2_ **play menu**
 
-2. play menu
+   - simple high-score implimentation and current score of the current game game-screen
+
+2. play menu screen
 
    - play button
    - restart button
+   - highscore
+   - levels
+     - progress by finish speed levels and food numbers
+   - TODO: later add unlock of levels by successfully finishing levels before it
 
 3. levels i.e first level no borders represent by faded border or dashed second level with border
 
 4. level 3 and beyond
+
+   - maze level faster snake
+
+5. settings
+   - music
+   - screen size
