@@ -2,7 +2,7 @@ use piston_window::{types::Color, Context, G2d};
 
 use crate::draw::draw_block;
 
-const FOOD_COLOR: Color = [0.80, 0.00, 0.02, 1.00];
+const FOOD_COLOR: Color = [0.90, 0.00, 0.02, 1.00];
 
 #[derive(Debug, PartialEq)]
 pub struct Food {

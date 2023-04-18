@@ -12,10 +12,14 @@ use piston_window::*;
 
 use game::Game;
 
-const BACK_COLOR: Color = [0.5, 0.5, 0.5, 1.0];
+///Background Color
+const BG_COLOR: Color = [0.5, 0.5, 0.2, 1.0];
 
 fn main() {
-    let (width, height) = (20, 20); // 500 * 500 game window
+    let mut is_device_info_printed = false;
+    let (width, height) = (30, 30); // 750 * 750 game window while block is 25
+
+    //creating a new window
     let mut window: PistonWindow =
         WindowSettings::new("Snake Game", [to_coord_u32(width), to_coord_u32(height)])
             .exit_on_esc(true)
@@ -30,8 +34,13 @@ fn main() {
 
         // piston window draw 2d function
         window.draw_2d(&event, |c, g, device| {
-            clear(BACK_COLOR, g);
-            println!("{:?}", device.get_info().version);
+            clear(BG_COLOR, g);
+            if !is_device_info_printed {
+                println!("FOR DEBUGGING");
+                println!("{:?}", device.get_info());
+                println!("Intial game object{:?}", game);
+                is_device_info_printed = true;
+            }
             game.draw(&c, g);
         });
 
@@ -41,5 +50,5 @@ fn main() {
             game.update(arg.dt);
         });
     }
-    println!("{:?}", game);
+    println!("Last game object{:?}", game);
 }

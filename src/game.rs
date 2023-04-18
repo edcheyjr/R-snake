@@ -177,8 +177,8 @@ impl Game {
     fn spawn_food(&mut self) {
         let mut rng = thread_rng();
 
-        let mut new_x = rng.gen_range(1..self.width - 1);
-        let mut new_y = rng.gen_range(1..self.width - 1);
+        let mut new_x = rng.gen_range(1..self.width);
+        let mut new_y = rng.gen_range(1..self.height);
 
         while self.snake.overlap_tail(new_x, new_y) {
             new_x = rng.gen_range(1..self.width) - 1;

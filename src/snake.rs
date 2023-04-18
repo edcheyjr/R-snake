@@ -5,7 +5,7 @@ use std::collections::LinkedList;
 use crate::draw::draw_block;
 use crate::food::Food;
 
-const SNAKE_COLOR: Color = [0.00, 0.90, 0.5, 1.00]; // [r,g,b,a]
+const SNAKE_COLOR: Color = [0.50, 0.90, 0.50, 1.00]; // [r,g,b,a]
 
 #[derive(Clone, Copy, PartialEq, Debug)]
 pub enum Direction {
