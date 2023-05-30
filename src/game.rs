@@ -6,6 +6,7 @@ use crate::draw::draw_rectangle;
 use crate::food::Food;
 use crate::snake::{Direction, Snake};
 
+//#TODO: FOOD SHOULD NOT SPAWN INSIDE BORDERS
 const BORDER_COLOR: Color = [0.00, 0.00, 0.00, 0.90];
 const GAME0VER_COLOR: Color = [0.90, 0.00, 0.02, 0.5];
 const GAMEPAUSED_COLOR: Color = [0.20, 0.00, 0.90, 0.5];
